@@ -37,7 +37,7 @@ router.post("/", async (req, res, next) => {
         return next(err);
     }
     const book = await Book.create(req.body);
-    return res.json({ books: book });
+    return res.status(201).json({ books: book });
 });
 
 /** PUT /[isbn]   bookData => {book: updatedBook}  */
