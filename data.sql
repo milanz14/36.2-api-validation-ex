@@ -1,4 +1,9 @@
-CREATE TABLE books (
+\c books
+
+DROP TABLE IF EXISTS allbooks;
+
+
+CREATE TABLE allbooks (
   isbn TEXT PRIMARY KEY,
   amazon_url TEXT,
   author TEXT,
